@@ -1,5 +1,5 @@
 /**
- * lists of students
+ * lists of students.
  * @returns {{id: Number, firstName: String, and location: String}[]}
  */
 export default function getListStudents() {
