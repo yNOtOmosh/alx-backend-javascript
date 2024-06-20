@@ -4,14 +4,26 @@
   "description": "How to Test NodeJS Apps using Mocha, Chai and SinonJS",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require esm"
+    "lint": "./node_modules/.bin/eslint",
+    "lint-all": "./node_modules/.bin/eslint [0-9]*.js",
+    "lint-fix-all": "./node_modules/.bin/eslint --fix [0-9]*.js",
+    "test": "node ./node_modules/mocha/bin/mocha --require babel-register --exit",
+    "dev": "nodemon --exec babel-node --presets babel-preset-env ./full_server/server.js ./database.csv"
   },
   "keywords": [],
-  "author": "",
+  "author": "yNOtOmosh",
   "license": "ISC",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-present-env": "^1.7.0",
+    "nodemon": "^3.1.4",
+    "eslint": "^9.5.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jest": "^28.6.0",
     "chai": "^5.1.1",
     "mocha": "^10.4.0",
-    "esm": "^3.2.25"
+    "request": "^2.88.2",
+    "sinon": "^18.0.0"
   }
 }
