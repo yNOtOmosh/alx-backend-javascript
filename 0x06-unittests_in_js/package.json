@@ -4,13 +4,14 @@
   "description": "How to Test NodeJS Apps using Mocha, Chai and SinonJS",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --require esm"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "chai": "^5.1.1",
-    "mocha": "^10.4.0"
+    "mocha": "^10.4.0",
+    "esm": "^3.2.25"
   }
 }
