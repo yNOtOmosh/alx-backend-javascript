@@ -1,14 +1,14 @@
 const fs = require('fs');
 
 const countStudents = (path) => {
-    if (!fs.existsSync(dataPath)) {
+    if (!fs.existsSync(path)) {
         throw new Error('Cannot load the database');
       }
-      if (!fs.statSync(dataPath).isFile()) {
+      if (!fs.statSync(path).isFile()) {
         throw new Error('Cannot load the database');
       }
       const fileLines = fs
-        .readFileSync(dataPath, 'utf-8')
+        .readFileSync(path, 'utf-8')
         .toString('utf-8')
         .trim()
         .split('\n');
